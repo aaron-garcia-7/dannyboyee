@@ -1,0 +1,177 @@
+/* 
+Satoshi Weights
+
+300 - 900 | Variable
+*/
+@font-face {
+  font-family: "satoshi";
+  src: url(../fonts/Satoshi-Variable.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "satoshi", sans-serif;
+  font-size: calc(0.8rem + 0.2vw);
+  font-weight: 360;
+}
+
+button {
+  width: 8rem;
+  text-align: left;
+  border: none;
+  border-top: 1px solid black;
+  background: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  margin: 16px 0;
+}
+
+ol {
+  list-style: none;
+}
+ol li {
+  display: flex;
+}
+ol li .item-number {
+  width: 36px;
+}
+
+.content {
+  position: relative;
+  max-width: 2400px;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 38rem;
+  margin: auto;
+}
+.content > * {
+  position: absolute;
+}
+.content .hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: calc(4rem + 8vw);
+}
+.content .hero-text {
+  font-size: calc(2rem + 1.2vw);
+  font-weight: 300;
+}
+.content .side-nav {
+  width: 20%;
+  height: 100%;
+  padding: 3.2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .side-nav ul li .active {
+  border: 2px solid red;
+}
+.content .side-nav ul li .semi-transparent {
+  opacity: 0.2;
+}
+.content .logo-wrapper {
+  bottom: 3.2rem;
+  right: 3.2rem;
+  z-index: 3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 82vw;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 38rem;
+  padding: 3.2rem 0;
+  display: flex;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+}
+.overlay-left, .overlay-right {
+  background: #fff;
+}
+.overlay-left {
+  position: relative;
+  transform: translate(0, -1%);
+  width: 28%;
+  transition: transform 0.16s ease;
+}
+.overlay-left .text-block {
+  border-top: 1px solid black;
+  margin-top: 24px;
+}
+.overlay-left .text-block:nth-of-type(1) {
+  margin-top: 16px;
+}
+.overlay-left .text-block p {
+  margin-bottom: 12px;
+}
+.overlay-left .grid-block {
+  display: grid;
+  grid-template: auto/1fr 1fr;
+}
+.overlay-left .grid-block .grid-title {
+  grid-column: 1/span 2;
+  margin-bottom: 4px;
+}
+.overlay-left .grid-block .grid-list {
+  grid-column: 1;
+  padding-left: 12px;
+}
+.overlay-left .grid-block .grid-list:nth-of-type(2) {
+  grid-column: 2;
+}
+.overlay-left .grid-block .grid-list li {
+  margin: 0;
+}
+.overlay-left .left-animator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transition: 0.16s ease;
+}
+.overlay-right {
+  width: 72%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-right img {
+  width: 24vw;
+  object-fit: cover;
+}
+
+.portfolio-overlay .overlay-left .text-block {
+  margin-top: 51px;
+}
+
+.active {
+  z-index: 3;
+  opacity: 1;
+  pointer-events: all;
+}
+.active .overlay-left {
+  transform: translate(0, 0);
+}
+.active .left-animator {
+  height: 0;
+}
+
+.opac {
+  opacity: 0.2;
+}/*# sourceMappingURL=styles.css.map */
